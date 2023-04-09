@@ -1,7 +1,19 @@
 [
 {
   "directory": "C:/dev/patterns/Debug",
-  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\main.cpp.obj -c C:\\dev\\patterns\\src\\main.cpp",
+  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\Command.cpp.obj -c C:\\dev\\patterns\\src\\Command.cpp",
+  "file": "C:\\dev\\patterns\\src\\Command.cpp",
+  "output": "CMakeFiles\\patterns.dir\\src\\Command.cpp.obj"
+},
+{
+  "directory": "C:/dev/patterns/Debug",
+  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\Player.cpp.obj -c C:\\dev\\patterns\\src\\Player.cpp",
+  "file": "C:\\dev\\patterns\\src\\Player.cpp",
+  "output": "CMakeFiles\\patterns.dir\\src\\Player.cpp.obj"
+},
+{
+  "directory": "C:/dev/patterns/Debug",
+  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\main.cpp.obj -c C:\\dev\\patterns\\src\\main.cpp",
   "file": "C:\\dev\\patterns\\src\\main.cpp",
   "output": "CMakeFiles\\patterns.dir\\src\\main.cpp.obj"
 }

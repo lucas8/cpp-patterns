@@ -1,10 +1,8 @@
-#include "Blah.h"
+#include "Command.hpp"
 #include <iostream>
 
 int main() {
-  A::B::Blah blah;
-
-  std::cout << blah.foo() << '\n';
+  test_command();
 
   return 0;
 }
