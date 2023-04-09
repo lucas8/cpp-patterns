@@ -10,7 +10,7 @@ namespace Command {
 
 // Sample of a player object
 struct Player {
-  void jump() { std::cout << "Player: jumped!" << '\n'; };
+  void jump() { std::cout << "Command: player jumped!" << '\n'; };
 };
 
 class Command {

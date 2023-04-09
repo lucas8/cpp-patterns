@@ -45,8 +45,6 @@ public:
       cmd->undo();
       cmdStack_.pop();
       redoStack_.push(cmd);
-    } else {
-      std::cout << "Nothing to undo!" << '\n';
     }
   }
 
@@ -56,8 +54,6 @@ public:
       cmd->redo();
       redoStack_.pop();
       cmdStack_.push(cmd);
-    } else {
-      std::cout << "Nothing to redo!" << '\n';
     }
   }
 
@@ -69,26 +65,17 @@ private:
 void test() {
   auto count = std::make_unique<int>(0);
   CommandManager cmdManager;
+  std::cout << "CommandCounter: initializing count at 0" << '\n';
 
-  // this is our "render loop"
-  while (true) {
-    std::cout << "Enter a counter command: ";
+  std::shared_ptr<Command> cmd(new IncrementCommand(count));
+  cmdManager.run(cmd);
+  std::cout << "CommandCounter: increment by 1, count is " << *count << '\n';
 
-    // Get user input
-    char i;
-    std::cin >> i;
+  cmdManager.undo();
+  std::cout << "CommandCounter: undo, count is " << *count << '\n';
 
-    if (i == 'i') {
-      std::shared_ptr<Command> cmd(new IncrementCommand(count));
-      cmdManager.run(cmd);
-    } else if (i == 'u') {
-      cmdManager.undo();
-    } else if (i == 'r') {
-      cmdManager.redo();
-    }
-
-    std::cout << "Count is now: " << *count << '\n';
-  }
+  cmdManager.redo();
+  std::cout << "CommandCounter: redo, count is " << *count << '\n';
 }
 
 } // namespace CommandCounter

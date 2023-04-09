@@ -13,6 +13,12 @@
 },
 {
   "directory": "C:/dev/patterns/Debug",
+  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\Flywheel.cpp.obj -c C:\\dev\\patterns\\src\\Flywheel.cpp",
+  "file": "C:\\dev\\patterns\\src\\Flywheel.cpp",
+  "output": "CMakeFiles\\patterns.dir\\src\\Flywheel.cpp.obj"
+},
+{
+  "directory": "C:/dev/patterns/Debug",
   "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\main.cpp.obj -c C:\\dev\\patterns\\src\\main.cpp",
   "file": "C:\\dev\\patterns\\src\\main.cpp",
   "output": "CMakeFiles\\patterns.dir\\src\\main.cpp.obj"
