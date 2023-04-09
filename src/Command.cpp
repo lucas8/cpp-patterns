@@ -1,10 +1,17 @@
 #include "Command.hpp"
-#include "Player.hpp"
 #include <iostream>
 
 /*
  * The Command Pattern
+ * See a more complete usage in todo
  */
+
+namespace Command {
+
+// Sample of a player object
+struct Player {
+  void jump() { std::cout << "Player: jumped!" << '\n'; };
+};
 
 class Command {
 public:
@@ -48,7 +55,7 @@ Command *InputHandler::handleInput(char i) {
 }
 
 // somewhere in the render loop
-void test_command() {
+void test() {
   InputHandler inputHandler;
   Player player;
 
@@ -57,3 +64,5 @@ void test_command() {
     command->execute(player);
   }
 }
+
+} // namespace Command

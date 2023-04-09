@@ -7,9 +7,9 @@
 },
 {
   "directory": "C:/dev/patterns/Debug",
-  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\Player.cpp.obj -c C:\\dev\\patterns\\src\\Player.cpp",
-  "file": "C:\\dev\\patterns\\src\\Player.cpp",
-  "output": "CMakeFiles\\patterns.dir\\src\\Player.cpp.obj"
+  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\CommandCounter.cpp.obj -c C:\\dev\\patterns\\src\\CommandCounter.cpp",
+  "file": "C:\\dev\\patterns\\src\\CommandCounter.cpp",
+  "output": "CMakeFiles\\patterns.dir\\src\\CommandCounter.cpp.obj"
 },
 {
   "directory": "C:/dev/patterns/Debug",

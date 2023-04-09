@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Command {
+namespace CommandCounter {
 
 void test();
 
