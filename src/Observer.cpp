@@ -1,5 +1,6 @@
 #include "Observer.hpp"
 #include <iostream>
+#include <list>
 
 /*
  * Observer pattern
@@ -11,88 +12,61 @@
 
 namespace Observer {
 
-constexpr int MAX_OBSERVERS = 10;
-
-// some made up game entities to pass to our observer (achievement)
-struct Entity {};
-enum Event { EVENT_ENTITY_FELL };
-enum Achievement { ACHIEVEMENT_FELL };
-
-class Observer {
+class IObserver {
 public:
-  virtual ~Observer() {}
-  // these patterns will change
-  virtual void onNotify(const Entity &entity, Event event) = 0;
+  virtual ~IObserver() {}
+  // these params will change, we should generally pass in an event
+  virtual void onNotify(const std::string &message) = 0;
 };
 
-class Achievements : public Observer {
+class ISubject {
 public:
-  virtual void onNotify(const Entity &entity, Event event) {
-    switch (event) {
-    case EVENT_ENTITY_FELL:
-      // do some work to check if the achievement has been unlocked
-      unlock(ACHIEVEMENT_FELL);
+  void addObserver(IObserver *observer) { observers_.push_back(observer); }
 
-      break;
-    }
-  };
+  void removeObserver(IObserver *observer) { observers_.remove(observer); }
 
-private:
-  void unlock(Achievement achievement) {
-    // unlock the achievement / store it whatever
-    std::cout << "Observer: unlocked an achievement!" << '\n';
-  }
-};
-
-// we can now use this class
-// an example would be attaching it to the "falling event" so observers
-// could register themselves with physics.entityFell().addObserver(this)
-class Subject {
-public:
-  void addObserver(Observer *observer) {
-    // this is pretty unsafe, use a stack or vector
-    observers_[numOfObservers_] = observer;
-    ++numOfObservers_;
-  }
-
-  void removeObserver(Observer *observer) {
-    // remove from array, decrement num
-  }
-
-  // we only want the caller (Physics) to notify observers
 protected:
-  void notify(const Entity &entity, Event event) {
-    for (int i = 0; i < numOfObservers_; i++) {
-      observers_[i]->onNotify(entity, event);
+  // we only want the caller to notify observers
+  void notify(const std::string &message) {
+    for (auto observer : observers_) {
+      observer->onNotify(message);
     }
   }
 
 private:
-  // in real code you would use a dynamicly sized collection
-  Observer *observers_[MAX_OBSERVERS];
-  int numOfObservers_ = 0;
+  std::list<IObserver *> observers_;
 };
 
-// in real code this isn't good inheritence on the Physics engine
-// subject should be an object on Physics
-class Physics : public Subject {
+class Observer : public IObserver {
 public:
-  void updateEntity(Entity &entity) {
-    // some other physics math to calculate if the player is falling
-    notify(entity, EVENT_ENTITY_FELL);
+  Observer(ISubject &subject) : subject_{subject} {
+    this->subject_.addObserver(this);
   };
+  ~Observer() { this->subject_.removeObserver(this); }
+
+  virtual void onNotify(const std::string &message) {
+    std::cout << "Observer: received message " << message << '\n';
+  };
+
+private:
+  ISubject &subject_;
+};
+
+class Subject : public ISubject {
+public:
+  void send(const std::string &message) { notify(message); };
 };
 
 void test() {
-  Physics physics;
-
   // if we make the observer a singly linked list,
   // we dont need the dynamic alloc call here
-  physics.addObserver(new Achievements());
+  Subject subject;
 
-  // pretend like we fell
-  Entity entity;
-  physics.updateEntity(entity);
+  Observer observer{subject};
+  Observer observer2{subject};
+
+  // send a message
+  subject.send("hello, world!");
 }
 
 } // namespace Observer
