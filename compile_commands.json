@@ -31,6 +31,12 @@
 },
 {
   "directory": "C:/dev/patterns/Debug",
+  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\Singleton.cpp.obj -c C:\\dev\\patterns\\src\\Singleton.cpp",
+  "file": "C:\\dev\\patterns\\src\\Singleton.cpp",
+  "output": "CMakeFiles\\patterns.dir\\src\\Singleton.cpp.obj"
+},
+{
+  "directory": "C:/dev/patterns/Debug",
   "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\main.cpp.obj -c C:\\dev\\patterns\\src\\main.cpp",
   "file": "C:\\dev\\patterns\\src\\main.cpp",
   "output": "CMakeFiles\\patterns.dir\\src\\main.cpp.obj"

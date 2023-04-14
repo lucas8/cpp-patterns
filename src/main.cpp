@@ -3,6 +3,7 @@
 #include "Flywheel.hpp"
 #include "Observer.hpp"
 #include "Prototype.hpp"
+#include "Singleton.hpp"
 #include <iostream>
 
 int main() {
@@ -18,6 +19,9 @@ int main() {
 
   // Prototype
   Prototype::test();
+
+  // Singleton
+  Singleton::test();
 
   return 0;
 }
