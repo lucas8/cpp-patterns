@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Flywheel {
+namespace Flyweight {
 
 void test();
 

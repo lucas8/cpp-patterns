@@ -1,14 +1,14 @@
-#include "Flywheel.hpp"
+#include "Flyweight.hpp"
 #include <iostream>
 #include <random>
 #include <stdint.h>
 
 /*
- * Flywheel pattern
+ * Flyweight pattern
  * effiency pattern, used to render a lotta stuff
  */
 
-namespace Flywheel {
+namespace Flyweight {
 
 constexpr int WIDTH = 10;
 constexpr int HEIGHT = 10;
@@ -72,7 +72,7 @@ void test() {
 
   auto tile = world.getTile(2, 4);
 
-  std::cout << "Flywheel: tile move cost is " << tile.getMoveCost() << '\n';
+  std::cout << "Flyweight: tile move cost is " << tile.getMoveCost() << '\n';
 }
 
-} // namespace Flywheel
+} // namespace Flyweight

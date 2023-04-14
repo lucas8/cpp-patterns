@@ -1,9 +1,10 @@
 #include "Command.hpp"
 #include "CommandCounter.hpp"
-#include "Flywheel.hpp"
+#include "Flyweight.hpp"
 #include "Observer.hpp"
 #include "Prototype.hpp"
 #include "Singleton.hpp"
+#include "State.hpp"
 #include <iostream>
 
 int main() {
@@ -11,8 +12,8 @@ int main() {
   Command::test();
   CommandCounter::test();
 
-  // Flywheel
-  Flywheel::test();
+  // Flyweight
+  Flyweight::test();
 
   // Observer
   Observer::test();
@@ -22,6 +23,9 @@ int main() {
 
   // Singleton
   Singleton::test();
+
+  // State
+  State::test();
 
   return 0;
 }

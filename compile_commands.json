@@ -13,9 +13,9 @@
 },
 {
   "directory": "C:/dev/patterns/Debug",
-  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\Flywheel.cpp.obj -c C:\\dev\\patterns\\src\\Flywheel.cpp",
-  "file": "C:\\dev\\patterns\\src\\Flywheel.cpp",
-  "output": "CMakeFiles\\patterns.dir\\src\\Flywheel.cpp.obj"
+  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\Flyweight.cpp.obj -c C:\\dev\\patterns\\src\\Flyweight.cpp",
+  "file": "C:\\dev\\patterns\\src\\Flyweight.cpp",
+  "output": "CMakeFiles\\patterns.dir\\src\\Flyweight.cpp.obj"
 },
 {
   "directory": "C:/dev/patterns/Debug",
@@ -34,6 +34,12 @@
   "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\Singleton.cpp.obj -c C:\\dev\\patterns\\src\\Singleton.cpp",
   "file": "C:\\dev\\patterns\\src\\Singleton.cpp",
   "output": "CMakeFiles\\patterns.dir\\src\\Singleton.cpp.obj"
+},
+{
+  "directory": "C:/dev/patterns/Debug",
+  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\State.cpp.obj -c C:\\dev\\patterns\\src\\State.cpp",
+  "file": "C:\\dev\\patterns\\src\\State.cpp",
+  "output": "CMakeFiles\\patterns.dir\\src\\State.cpp.obj"
 },
 {
   "directory": "C:/dev/patterns/Debug",
