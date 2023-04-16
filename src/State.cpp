@@ -20,7 +20,9 @@ enum Input { INPUT_RELEASE_DOWN, INPUT_PRESS_B };
 class PlayerState {
 public:
   virtual ~PlayerState(){};
-  virtual PlayerState *handleInput(Player &player, Input input){};
+  virtual PlayerState *handleInput(Player &player, Input input) {
+    return NULL;
+  };
 
   virtual void update(Player &player){};
   virtual void enter(Player &player){};

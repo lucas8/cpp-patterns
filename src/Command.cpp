@@ -16,6 +16,7 @@ struct Player {
 class Command {
 public:
   virtual ~Command() {}
+
   // pure virtual function
   virtual void execute(Player &p) = 0;
 };

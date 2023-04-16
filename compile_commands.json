@@ -13,6 +13,12 @@
 },
 {
   "directory": "C:/dev/patterns/Debug",
+  "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\DoubleBuffer.cpp.obj -c C:\\dev\\patterns\\src\\DoubleBuffer.cpp",
+  "file": "C:\\dev\\patterns\\src\\DoubleBuffer.cpp",
+  "output": "CMakeFiles\\patterns.dir\\src\\DoubleBuffer.cpp.obj"
+},
+{
+  "directory": "C:/dev/patterns/Debug",
   "command": "C:\\MinGW\\bin\\c++.exe -IC:/dev/patterns/include -g -std=gnu++1z -o CMakeFiles\\patterns.dir\\src\\Flyweight.cpp.obj -c C:\\dev\\patterns\\src\\Flyweight.cpp",
   "file": "C:\\dev\\patterns\\src\\Flyweight.cpp",
   "output": "CMakeFiles\\patterns.dir\\src\\Flyweight.cpp.obj"

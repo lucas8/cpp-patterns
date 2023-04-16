@@ -1,5 +1,6 @@
 #include "Command.hpp"
 #include "CommandCounter.hpp"
+#include "DoubleBuffer.hpp"
 #include "Flyweight.hpp"
 #include "Observer.hpp"
 #include "Prototype.hpp"
@@ -26,6 +27,9 @@ int main() {
 
   // State
   State::test();
+
+  // State
+  DoubleBuffer::test();
 
   return 0;
 }
